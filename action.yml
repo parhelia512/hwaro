@@ -93,5 +93,5 @@ runs:
           -e REPOSITORY="${{ inputs.repository }}" \
           -e GITHUB_HOSTNAME="${{ inputs.github_hostname }}" \
           -e INPUT_TOKEN="${{ steps.token.outputs.value }}" \
-          -e VERSION="${{ inputs.version }}" \
+          -e VERSION="${{ github.event.inputs.version }}" \
           "${{ steps.resolve.outputs.image }}"
